@@ -169,6 +169,8 @@ filter: brightness(0.8) blur(1px)
 .hero::before {
   content:"";
   position:absolute;
+  top:0;
+  left:0;
   width:100%;
   height:100%;
   background:linear-gradient(
@@ -176,14 +178,18 @@ filter: brightness(0.8) blur(1px)
     rgba(0,0,0,0.85),
     rgba(0,0,0,0.65)
   );
+  z-index:1;
 }
+
+
+
 
 .hero-content {
   position:relative;
   z-index:2;
-  max-width:750px;
-  padding:0 20px;
 }
+
+
 
 .hero h1 {
   font-size:46px;
@@ -202,14 +208,10 @@ filter: brightness(0.8) blur(1px)
 
 /* BUTTON */
 .btn {
-  margin-top:25px;
-  background:transparent;
-  color:#fff;
-  padding:14px 28px;
-  border-radius:25px;
-  border:1px solid #fff;
-  cursor:pointer;
+  width:100%;
+  max-width:280px;
 }
+
 
 .btn:hover {
   background:#fff;
@@ -264,19 +266,64 @@ footer {
 }
 
 /* MOBILE */
+
+
 @media (max-width:768px) {
+
+  /* HEADER */
   nav {
     display:none;
   }
 
+  .cta {
+    display:none;
+  }
+
+  .logo-img {
+    height:65px;
+  }
+
+  /* HERO */
   .hero {
     height:60vh;
+    padding:0 15px;
   }
 
   .hero h1 {
-    font-size:28px;
+    font-size:26px;
   }
+
+  .hero p {
+    font-size:16px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding:50px 15px;
+  }
+
+  /* TJÄNSTER */
+  .grid {
+    grid-template-columns:1fr;
+  }
+
+  /* KONTAKT */
+  .contact-wrapper {
+    flex-direction:column;
+    gap:20px;
+    text-align:center;
+  }
+
+  .contact-text {
+    text-align:center;
+  }
+
+  .contact-logo img {
+    height:80px;
+  }
+
 }
+
 </style>
 </head>
 
@@ -308,14 +355,12 @@ footer {
 </header>
 
 <!-- HERO -->
-<div class="hero">
 
-<video autoplay muted loop playsinline 
-poster="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1920&auto=format&fit=crop">
-
-  <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=1e5c242c8c0c6fe2c430fa8d7483b8a3cbf2dfe5&profile_id=164" type="video/mp4">
-
-</video>
+<div class="hero" style="
+background-image:url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1920&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+">
 
 <div class="hero-content">
 <h1>Optimera energin i din fastighet</h1>
@@ -324,9 +369,8 @@ poster="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1920
 
 </div>
 <section class="value" id="om">
-<h2>För fastighetsägare</h2>
-<p>Många fastighetsägare betalar idag för mycket för sin köpta energi, när det i många fall är möjligt att flytta energi inom byggnaden.
-Vi identifierar besparingar och implementerar lösningar som ger effekt direkt i driftbudgeten.</p>
+<h2>Våra kunder</h2>
+<p>Vi hjälper bland annat fastighetsägare, entreprenörer, konsulter och bostadsrättsföreningar med VVS-projekteringar, utredningar och teknikstöd i projektens olika skeden.</p>
 </section>
 
 <section id="tjanster" class="services">
