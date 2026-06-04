@@ -13,6 +13,15 @@ body {
   color:#fff;
 }
 
+a {
+  color:#fff;
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
 .contact-wrapper {
   display:flex;
   justify-content:center;
@@ -24,25 +33,62 @@ body {
   height:100px;
 }
 
-.contact-text {
-  text-align:left;
-  line-height:1.8;
+
+
+contact-text {
+  font-size:16px;
 }
 
+.contact-text p {
+  margin:10px 0;
+}
 
+/* LABEL (Email / Telefon) */
+.contact-text p {
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+/* LÄNK */
+.contact-text a {
+  color:#fff;
+  font-weight:bold;
+  text-decoration:underline;
+}
+
+.contact-text a:hover {
+  opacity:0.8;
+}
 
 /* LOGGA NERE */
 .contact-logo img {
-  height:150px;
+  height:180px;
   max-width:200px;
 }
 
 
 /* TEXT */
+
+
 .contact-text {
-  text-align:left;
   font-size:16px;
 }
+
+.contact-text p {
+  margin:8px 0;
+}
+
+.contact-text a {
+  color:#fff;
+  font-weight:bold;
+  text-decoration:underline;
+}
+
+.contact-text a:hover {
+  opacity:0.8;
+}
+
 
 
 /* HEADER */
@@ -82,7 +128,7 @@ body {
 }
 
 .logo-img {
-  height:140px;
+  height:180px;
   display:block;
 
 }
@@ -156,9 +202,11 @@ nav a:hover {
   overflow:hidden;
 }
 
+
 .hero video {
-filter: brightness(0.8) blur(1px)
+  filter: brightness(0.8) blur(1px);
   position:absolute;
+
   top:0;
   left:0;
   width:100%;
@@ -316,6 +364,7 @@ footer {
 
   .contact-text {
     text-align:center;
+
   }
 
   .contact-logo img {
@@ -369,12 +418,12 @@ background-position:center;
 
 </div>
 <section class="value" id="om">
-<h2>Våra kunder</h2>
+<h2>Om oss</h2>
 <p>Vi hjälper bland annat fastighetsägare, entreprenörer, konsulter och bostadsrättsföreningar med VVS-projekteringar, utredningar och teknikstöd i projektens olika skeden.</p>
 </section>
 
 <section id="tjanster" class="services">
-<h2>Våra tjänster</h2>
+<h2>Tjänster</h2>
 
 <div class="grid">
 <div class="card"><h3>Analys</h3><p>Kartlägg energiförbrukning och besparingar.</p></div>
@@ -398,8 +447,22 @@ background-position:center;
 
   <!-- TEXT -->
   <div class="contact-text">
-    <p>Email: mattias@MBTeknikkonsult.se</p>
-    <p>Telefon: 070-555 04 10</p>
+
+
+<p>
+  Email: 
+  <a href="mailto:mattias@MBTeknikkonsult.se?subject=Förfrågan från hemsidan">
+    mattias@MBTeknikkonsult.se
+  </a>
+</p>
+
+<p>
+  Telefon: 
+  <a href="tel:0705550410">
+    070-555 04 10
+  </a>
+</p>
+
   </div>
 
 </div>
