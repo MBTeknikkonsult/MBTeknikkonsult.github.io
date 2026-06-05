@@ -6,18 +6,66 @@
 <title>MB Teknikkonsult AB</title>
 
 
+
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 
+
 <style>
+
+.premium-card .intro {
+  opacity: 0.7;
+  font-size: 15px;
+}
+
+
+.premium-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 20px auto 0 auto;
+  display: inline-block;
+  text-align: left;
+  max-width: 220px;
+}
+
+/* Premium punkt */
+.premium-list li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #aaa;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  font-size: 15px;
+}
+
+.premium-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+font-size: 15px;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   margin:0;
   font-family: Arial, sans-serif;
   background:#0b0b0b;
   color:#fff;
 }
+
+
 
 a {
   color:#fff;
@@ -254,7 +302,10 @@ nav a:hover {
 .hero p {
   font-size:18px;
   line-height:1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }
+
 
 .highlight {
   font-weight:bold;
@@ -308,6 +359,16 @@ section {
 .card:hover {
   transform: translateY(-5px);
   border-color:#555;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 15px;
+  opacity: 0.8;
 }
 
 
@@ -379,6 +440,32 @@ footer {
 
 }
 
+
+/* OM OSS – bättre läsbarhet */
+#om {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+#om p {
+  line-height: 1.7;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+#om h2 {
+  margin-bottom: 30px;
+}
+
+
+
+/* Fix för sticky header (alla sektioner) */
+section {
+  scroll-margin-top: 120px;
+}
+
+
 </style>
 </head>
 
@@ -419,22 +506,84 @@ background-position:center;
 
 <div class="hero-content">
 <h1>Optimera energin i din fastighet</h1>
-<p>Vi hjälper fastighetsägare att minska energikostnader och öka driftnetto genom smarta energilösningar, energirådgivning för val av energisystem samt projektering av rätt systemlösning.</p>
+<p>
+Vi hjälper våra kunder att minska energikostnader och öka driftnetto genom smarta energilösningar, energirådgivning för val av energisystem samt projektering av rätt systemlösning.
+</p>
+
+<p>
+Vi hjälper fastighetsägare, entreprenörer, konsulter och bostadsrättsföreningar med VVS-projekteringar, utredningar och teknikstöd i projektens olika skeden, alltid med fokus på hög kvalitét.</p>
 </div>
 
 </div>
 <section class="value" id="om">
 <h2>Om oss</h2>
-<p>Vi hjälper bland annat fastighetsägare, entreprenörer, konsulter och bostadsrättsföreningar med VVS-projekteringar, utredningar och teknikstöd i projektens olika skeden.</p>
+
+<p>
+MB Teknikkonsult AB är ett tekniskt konsultbolag med inriktning mot VVS, kyla och värmepumpsanläggningar. Vi erbjuder kvalificerad rådgivning, projektering och utredningar till fastighetsägare, entreprenörer och bostadsrättsföreningar över hela Sverige. Vi jobbar både direkt mot slutkund, eller som underkonsult till entreprenörer och konsultbolag. 
+</p>
+
+<p>
+Bolaget drivs av Mattias Björn, med erfarenhet från branschen sedan 2008. Genom roller som projekterande konsult, uppdragsledare, teknikansvarig och affärsansvarig har vi byggt upp en bred och djup kompetens inom tekniska system och deras samverkan. Det ger en helhetssyn där funktion, ekonomi och långsiktig drift alltid står i centrum.
+Vi arbetar med ett tydligt fokus på kvalitet, energieffektiva lösningar och kostnadsmedvetenhet. I många uppdrag fungerar vi som ett nära tekniskt stöd och bollplank genom hela processen – från tidiga utredningar till färdig anläggning.
+</p>
+
+<p>
+Som mindre och personlig aktör värdesätter vi långsiktiga relationer, tillgänglighet och ett genuint engagemang i varje uppdrag. Vår ambition är att leverera genomtänkta och hållbara lösningar som skapar trygghet och mervärde för våra kunder.
+</p>
 </section>
 
 <section id="tjanster" class="services">
 <h2>Tjänster</h2>
 
 <div class="grid">
-<div class="card"><h3>Analys</h3><p>Kartlägg energiförbrukning och besparingar.</p></div>
-<div class="card"><h3>Projektering</h3><p>Dimensionering och projektering av lämplig systemlösning för just din fastighet.</p></div>
-<div class="card"><h3>Teknikstöd</h3><p>Vi hjälper er med tekniska frågor, granskning av handlingar och lämnar förbättrningsförslag på nya och befintliga fastigheter.</p></div>
+<div class="card">
+
+
+  <h3>Förstudie</h3>
+
+  <p class="intro">
+    Vi erbjuder:
+  </p>
+
+  <ul class="premium-list">
+    <li>Energikartläggning</li>
+    <li>Åtgärdsförslag</li>
+    <li>Kostnadskalkyl</li>
+    <li>Genomförandeanalys</li>
+  </ul>
+</div>
+
+<div class="card premium-card">
+
+  <h3>Projektering</h3>
+
+  <p class="intro">
+    Vi erbjuder projektering inom:
+  </p>
+
+  <ul class="premium-list">
+    <li>VVS-tekniska system</li>
+    <li>Värmepumpsanläggningar</li>
+    <li>Kylanläggningar</li>
+    <li>Kombinerade kyl-värmepumpsaläggningar</li>
+  </ul>
+
+</div>
+
+
+<div class="card"><h3>Tekniskt stöd</h3>
+<p>
+Vi erbjuder tekniskt stöd:
+  </p>
+
+  <ul class="premium-list">
+    <li>Tekniska frågor</li>
+    <li>Granskning av handlingar</li>
+    <li>Förbättringsförslag</li>
+    <li>"Bollplank"</li>
+  </ul>
+
+
 </div>
 
 </section>
